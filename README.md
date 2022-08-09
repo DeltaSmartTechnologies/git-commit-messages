@@ -14,7 +14,7 @@ type - It has various kind of types. However, we use mainly feat, fix, refactor 
   - refactor = improving the internal structure of an existing program's source code, while preserving its external behavior
   - chore = updating grunt tasks etc; no production code change
   
-for more ![conventionalcommits.org](https://www.conventionalcommits.org)
+for more [conventionalcommits.org](https://www.conventionalcommits.org)
 
 ---
 ## Examples
