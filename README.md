@@ -31,5 +31,10 @@ for more [conventionalcommits.org](https://www.conventionalcommits.org)
 ---
 ## Git Hooks
 
-Please add hooks under githooks to every repository you created and existing. It checks whether the commit convention is true or not
+Please add the *commit-msg* hook to repository you created. 
+- Create ``` .githooks/ ``` folder 
+- Copy ``` commit-msg ``` hook to the folder
+- Make sure it is executable with ``` chmod +x commit-msg ```
+- Make your new hook path as ``` git config core.hooksPath .githooks ```
+- Now you are ready to go. It will prompt you whether msg is wrong or true
 
