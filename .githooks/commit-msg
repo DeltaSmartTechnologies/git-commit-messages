@@ -1,0 +1,16 @@
+#!/bin/bash
+
+COMMIT_REGEX="^\[TID_[0-9]+] (feat|refactor|fix|build|chore|ci|docs|style|perf|test): [a-zA-Z]+"
+COMMIT_MSG=$(echo $(cat "$1") | grep -o -E "$COMMIT_REGEX")
+
+if [[ -z "$COMMIT_MSG" ]]; then
+    BRANCH_NAME=$(git symbolic-ref --short HEAD)
+    MSG=$(echo "$BRANCH_NAME" | grep -o -E "$COMMIT_REGEX")
+
+    if [[ -z "$MSG" ]]; then
+        echo "[commit-msg-hook] Invalid commit msg. Please rename your commit msg via regex: $COMMIT_REGEX"
+        exit 1
+    fi
+
+    echo "$MSG | $(cat "$1")" > "$1"
+fi
