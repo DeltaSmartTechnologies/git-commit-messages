@@ -1,0 +1,1 @@
+This folder is for scripts. Its name is 8 length long generated hash. Why this way? Because of security issues.
