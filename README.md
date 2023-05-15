@@ -38,3 +38,7 @@ Please add the *commit-msg* hook to repository you created.
 - Make your new hook path as ``` git config core.hooksPath .githooks ```
 - Now you are ready to go. It will prompt you whether msg is wrong or true
 
+## Scripts folder
+
+To fasten up git stages please use 'a82e7b5f' folder. İt contains git processes together in one script. Do not forget to rename folder in 8 length long generated hash string. 
+Do not forget to copy this repository contents to your repository that you are currently working on
